@@ -1,0 +1,186 @@
+name: Release
+
+# Workflow can be triggered manually OR by pushing a tag matching v*
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version (e.g. v0.1.0)'
+        required: true
+        default: 'v0.1.0'
+        type: string
+      prerelease:
+        description: 'Mark as pre-release?'
+        required: false
+        default: false
+        type: boolean
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build ${{ matrix.target.name }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        target:
+          - { name: linux-amd64,   goos: linux,   goarch: amd64,  suffix: '' }
+          - { name: linux-arm64,   goos: linux,   goarch: arm64,  suffix: '' }
+          - { name: darwin-amd64,  goos: darwin,  goarch: amd64,  suffix: '' }
+          - { name: darwin-arm64,  goos: darwin,  goarch: arm64,  suffix: '' }
+          - { name: windows-amd64, goos: windows, goarch: amd64,  suffix: '.exe' }
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+          check-latest: true
+
+      - name: Locate project root
+        id: root
+        shell: bash
+        run: |
+          set -e
+          MAIN=$(find . -maxdepth 6 -path '*/cmd/outbalancer/main.go' -not -path './.git/*' -print -quit)
+          if [ -z "$MAIN" ]; then
+            echo "::error ::cmd/outbalancer/main.go not found"
+            find . -maxdepth 4 -not -path './.git*' | sort
+            exit 1
+          fi
+          DIR=$(dirname "$(dirname "$(dirname "$MAIN")")")
+          echo "Project root: $DIR"
+          echo "dir=$DIR" >> "$GITHUB_OUTPUT"
+
+      - name: Resolve version
+        id: ver
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            VERSION="${{ inputs.version }}"
+          else
+            VERSION="${GITHUB_REF#refs/tags/}"
+          fi
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+
+      - name: Download dependencies
+        shell: bash
+        working-directory: ${{ steps.root.outputs.dir }}
+        run: |
+          go mod tidy
+          go mod download
+
+      - name: Build single-binary (xray-core embedded)
+        shell: bash
+        working-directory: ${{ steps.root.outputs.dir }}
+        env:
+          GOOS:        ${{ matrix.target.goos }}
+          GOARCH:      ${{ matrix.target.goarch }}
+          CGO_ENABLED: '0'
+        run: |
+          set -euo pipefail
+          BIN_NAME="outbalancer-${{ matrix.target.name }}${{ matrix.target.suffix }}"
+          mkdir -p dist
+
+          go build -trimpath \
+            -ldflags="-s -w -X main.version=${{ steps.ver.outputs.version }}" \
+            -o "dist/${BIN_NAME}" \
+            ./cmd/outbalancer
+
+          echo "Built single binary (xray-core fully embedded):"
+          ls -lh "dist/${BIN_NAME}"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: outbalancer-${{ matrix.target.name }}
+          path: ${{ steps.root.outputs.dir }}/dist/outbalancer-*
+          retention-days: 7
+
+  release:
+    name: Create Release
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Resolve version
+        id: ver
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            VERSION="${{ inputs.version }}"
+          else
+            VERSION="${GITHUB_REF#refs/tags/}"
+          fi
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+
+      - name: Generate checksums
+        shell: bash
+        working-directory: dist
+        run: |
+          ls -la
+          if ls outbalancer-* >/dev/null 2>&1; then
+            sha256sum outbalancer-* > SHA256SUMS.txt
+            cat SHA256SUMS.txt
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.ver.outputs.version }}
+          name: OutBalancer ${{ steps.ver.outputs.version }}
+          body: |
+            ## OutBalancer ${{ steps.ver.outputs.version }}
+
+            **Single binary, xray-core fully embedded.**
+            No separate xray install. No CDN dependencies. Works on air-gapped servers.
+
+            ### Downloads (single executable)
+
+            | Platform | Architecture | File |
+            |----------|--------------|------|
+            | Linux    | amd64        | `outbalancer-linux-amd64` |
+            | Linux    | arm64        | `outbalancer-linux-arm64` |
+            | macOS    | amd64        | `outbalancer-darwin-amd64` |
+            | macOS    | arm64 (M1+)  | `outbalancer-darwin-arm64` |
+            | Windows  | amd64        | `outbalancer-windows-amd64.exe` |
+
+            ### Quick Start (Linux)
+
+            ```bash
+            wget https://github.com/${{ github.repository }}/releases/download/${{ steps.ver.outputs.version }}/outbalancer-linux-amd64
+            chmod +x outbalancer-linux-amd64
+            ./outbalancer-linux-amd64
+            ```
+
+            Open http://localhost:8088 — that's it.
+
+            ### Custom ports
+
+            ```bash
+            ./outbalancer-linux-amd64 --socks 11080 --http 11081 --port 9000
+            ./outbalancer-linux-amd64 --listen 0.0.0.0   # share proxy on LAN
+            ```
+
+            All binaries SHA256-checksummed.
+          files: dist/*
+          draft: false
+          prerelease: ${{ github.event_name == 'workflow_dispatch' && inputs.prerelease || false }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

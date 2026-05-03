@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800">
+
+<defs>
+  <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0" stop-color="#05060d"/>
+    <stop offset="1" stop-color="#0a0d1a"/>
+  </linearGradient>
+  <radialGradient id="glow1" cx="0.85" cy="-0.1" r="0.8">
+    <stop offset="0" stop-color="#7c5cff" stop-opacity="0.18"/>
+    <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="glow2" cx="0.1" cy="1.1" r="0.8">
+    <stop offset="0" stop-color="#00ffd1" stop-opacity="0.12"/>
+    <stop offset="1" stop-color="#00ffd1" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="card" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0.07"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity="0.04"/>
+  </linearGradient>
+  <linearGradient id="accent" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#00ffd1"/>
+    <stop offset="1" stop-color="#7c5cff"/>
+  </linearGradient>
+  <linearGradient id="primary" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#00ffd1"/>
+    <stop offset="1" stop-color="#00cfa6"/>
+  </linearGradient>
+  <linearGradient id="brand" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0" stop-color="#00ffd1"/>
+    <stop offset="0.5" stop-color="#7c5cff"/>
+    <stop offset="1" stop-color="#ff5c87"/>
+  </linearGradient>
+  <linearGradient id="trafficGreen" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="#00ffd1" stop-opacity="0.4"/>
+    <stop offset="1" stop-color="#00ffd1" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="trafficPurple" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="#7c5cff" stop-opacity="0.35"/>
+    <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="trafficPink" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="#ff5c87" stop-opacity="0.3"/>
+    <stop offset="1" stop-color="#ff5c87" stop-opacity="0"/>
+  </linearGradient>
+  <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+    <path d="M 56 0 L 0 0 0 56" fill="none" stroke="#ffffff" stroke-opacity="0.018" stroke-width="1"/>
+  </pattern>
+</defs>
+<rect width="100%" height="100%" fill="url(#bg)"/>
+<rect width="100%" height="100%" fill="url(#glow1)"/>
+<rect width="100%" height="100%" fill="url(#glow2)"/>
+<rect width="100%" height="100%" fill="url(#grid)"/><rect x="1000" y="0" width="280" height="800" fill="#0d1124" opacity="0.85"/>
+<line x1="1000" y1="0" x2="1000" y2="800" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+<g transform="translate(1020,30)">
+  <rect width="44" height="44" rx="12" fill="url(#brand)"/>
+  <rect x="3" y="3" width="38" height="38" rx="9" fill="#0a0d1a"/>
+  <text x="22" y="30" text-anchor="middle" font-size="20" fill="#00ffd1" font-family="Vazirmatn, sans-serif">⚡</text>
+  <text x="60" y="22" font-family="Syne, sans-serif" font-size="17" font-weight="800" fill="#fff">OutBalancer</text>
+  <text x="60" y="36" font-family="JetBrains Mono, monospace" font-size="9" fill="#5e6585" letter-spacing="2">v0.1.0 · CORE</text>
+</g>
+<line x1="1020" y1="92" x2="1260" y2="92" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="1240" y="120" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#5e6585" letter-spacing="2">— داشبورد</text><rect x="1257" y="137" width="3" height="22" rx="2" fill="#00ffd1"/>
+<g>
+  <rect x="1020" y="132" width="220" height="32" rx="11" fill="#00ffd1" fill-opacity="0.1" stroke="#00ffd1" stroke-opacity="0.18"/>
+  <text x="1228" y="152" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#f4f6ff">نمای کلی ▦</text></g>
+<g>
+  <rect x="1020" y="168" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="188" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">آمار زنده ↗</text>
+  <rect x="1030" y="175" width="34" height="18" rx="6" fill="#00ffd1" fill-opacity="0.15"/>
+  <text x="1047" y="187" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#00ffd1" font-weight="700">LIVE</text></g>
+<g>
+  <rect x="1020" y="204" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="224" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">هیت‌مپ مصرف ✦</text></g>
+<text x="1240" y="250" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#5e6585" letter-spacing="2">— پیکربندی</text>
+<g>
+  <rect x="1020" y="262" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="282" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">سرورها ▤</text>
+  <rect x="1030" y="269" width="34" height="18" rx="6" fill="#00ffd1" fill-opacity="0.15"/>
+  <text x="1047" y="281" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#00ffd1" font-weight="700">10</text></g>
+<g>
+  <rect x="1020" y="298" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="318" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">قوانین مسیریابی ◈</text></g>
+<g>
+  <rect x="1020" y="334" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="354" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">الگوریتم بالانس ⇅</text></g>
+<g>
+  <rect x="1020" y="370" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="390" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">Speed Boost ▲</text>
+  <rect x="1030" y="377" width="34" height="18" rx="6" fill="#ff5c87" fill-opacity="0.15"/>
+  <text x="1047" y="389" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#ff5c87" font-weight="700">★</text></g>
+<g>
+  <rect x="1020" y="406" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="426" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">پروفایل‌ها ❍</text></g>
+<g>
+  <rect x="1020" y="442" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="462" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">زمانبندی ⊙</text></g>
+<text x="1240" y="488" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#5e6585" letter-spacing="2">— پیشرفته</text>
+<g>
+  <rect x="1020" y="500" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="520" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">هشدارها ◉</text>
+  <rect x="1030" y="507" width="34" height="18" rx="6" fill="#00ffd1" fill-opacity="0.15"/>
+  <text x="1047" y="519" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#00ffd1" font-weight="700">3</text></g>
+<g>
+  <rect x="1020" y="536" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="556" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">DNS هوشمند ◆</text></g>
+<g>
+  <rect x="1020" y="572" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="592" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">API &amp; Webhooks ⌥</text></g>
+<g>
+  <rect x="1020" y="608" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="628" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">لاگ‌ها ≡</text></g>
+<text x="1240" y="654" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#5e6585" letter-spacing="2">— سیستم</text>
+<g>
+  <rect x="1020" y="666" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="686" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">تنظیمات ⚙</text></g>
+<g>
+  <rect x="1020" y="702" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="722" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">پشتیبان‌گیری ☁</text></g>
+<g transform="translate(1020,720)">
+  <rect width="220" height="58" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <circle cx="36" cy="29" r="18" fill="url(#brand)"/>
+  <text x="36" y="35" text-anchor="middle" font-family="Vazirmatn" font-size="14" font-weight="700" fill="#fff">A</text>
+  <text x="60" y="26" font-family="Vazirmatn" font-size="13" font-weight="600" fill="#f4f6ff">Admin</text>
+  <text x="60" y="40" font-family="JetBrains Mono" font-size="10" fill="#5e6585">SUPERUSER</text>
+  <circle cx="200" cy="30" r="4" fill="#00ffa3" filter="url(#glow)"/>
+</g>
+<g transform="translate(40,30)">
+  <text x="920" y="28" text-anchor="end" font-family="Syne, sans-serif" font-size="28" font-weight="700" fill="#fff">نمای <tspan fill="url(#accent)">کلی</tspan></text>
+  <text x="920" y="50" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="11" fill="#5e6585">// real-time balancer telemetry · uptime 14d 06h</text>
+
+  <rect x="120" y="14" width="240" height="38" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="135" y="38" font-family="Vazirmatn, sans-serif" font-size="14" fill="#5e6585">⌕</text>
+  <text x="160" y="38" font-family="Vazirmatn, sans-serif" font-size="12" fill="#5e6585">جستجو...</text>
+  <rect x="320" y="22" width="32" height="20" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="336" y="36" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#5e6585">⌘K</text>
+
+  <rect x="380" y="14" width="38" height="38" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="399" y="38" text-anchor="middle" font-size="14">◉</text>
+  <circle cx="411" cy="22" r="4" fill="#ff5c87"/>
+
+  <rect x="430" y="14" width="38" height="38" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="449" y="38" text-anchor="middle" font-size="14">☾</text>
+
+  <rect x="478" y="14" width="170" height="38" rx="12" fill="url(#primary)"/>
+  <text x="563" y="38" text-anchor="middle" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="700" fill="#001a14">+ کانفیگ جدید</text>
+</g>
+<g transform="translate(40,100)">
+  <rect width="220" height="140" rx="20" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.08"/>
+  <rect x="20" y="22" width="44" height="44" rx="14" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.14"/>
+  <text x="42" y="50" text-anchor="middle" font-size="20" fill="#00ffd1">⚡</text>
+  <rect x="155" y="28" width="50" height="22" rx="8" fill="#00ffa3" fill-opacity="0.12"/>
+  <text x="180" y="44" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="#00ffa3">↑ live</text>
+  <text x="200" y="98" text-anchor="end" font-family="Syne, sans-serif" font-size="28" font-weight="700" fill="#f4f6ff">847<tspan font-size="14" fill="#5e6585"> Mbps</tspan></text>
+  <text x="200" y="120" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#5e6585" letter-spacing="1">throughput فعلی</text>
+</g>
+<g transform="translate(280,100)">
+  <rect width="220" height="140" rx="20" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.08"/>
+  <rect x="20" y="22" width="44" height="44" rx="14" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.14"/>
+  <text x="42" y="50" text-anchor="middle" font-size="20" fill="#00ffd1">◷</text>
+  <rect x="155" y="28" width="50" height="22" rx="8" fill="#00ffa3" fill-opacity="0.12"/>
+  <text x="180" y="44" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="#00ffa3">↓ 8ms</text>
+  <text x="200" y="98" text-anchor="end" font-family="Syne, sans-serif" font-size="28" font-weight="700" fill="#f4f6ff">42<tspan font-size="14" fill="#5e6585"> ms</tspan></text>
+  <text x="200" y="120" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#5e6585" letter-spacing="1">پینگ میانگین</text>
+</g>
+<g transform="translate(520,100)">
+  <rect width="220" height="140" rx="20" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.08"/>
+  <rect x="20" y="22" width="44" height="44" rx="14" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.14"/>
+  <text x="42" y="50" text-anchor="middle" font-size="20" fill="#00ffd1">▤</text>
+  <rect x="155" y="28" width="50" height="22" rx="8" fill="#00ffa3" fill-opacity="0.12"/>
+  <text x="180" y="44" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="#00ffa3">9/10</text>
+  <text x="200" y="98" text-anchor="end" font-family="Syne, sans-serif" font-size="28" font-weight="700" fill="#f4f6ff">9<tspan font-size="14" fill="#5e6585"> active</tspan></text>
+  <text x="200" y="120" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#5e6585" letter-spacing="1">سرورهای آنلاین</text>
+</g>
+<g transform="translate(760,100)">
+  <rect width="220" height="140" rx="20" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.08"/>
+  <rect x="20" y="22" width="44" height="44" rx="14" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.14"/>
+  <text x="42" y="50" text-anchor="middle" font-size="20" fill="#00ffd1">▣</text>
+  <rect x="155" y="28" width="50" height="22" rx="8" fill="#ffffff" fill-opacity="0.06"/>
+  <text x="180" y="44" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="700" fill="#a8b0c9">↑ 2.1%</text>
+  <text x="200" y="98" text-anchor="end" font-family="Syne, sans-serif" font-size="28" font-weight="700" fill="#f4f6ff">1.4<tspan font-size="14" fill="#5e6585"> TB</tspan></text>
+  <text x="200" y="120" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#5e6585" letter-spacing="1">مصرف ماهانه</text>
+</g>
+<rect x="40" y="260" width="460" height="240" rx="20" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="478" y="290" text-anchor="end" font-family="Syne, sans-serif" font-size="15" font-weight="700" fill="#f4f6ff">آخرین هشدارها</text>
+<text x="478" y="306" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#5e6585">// ۴ مورد · جدیدترین</text>
+<rect x="60" y="305" width="28" height="28" rx="8" fill="#ff4d6d" fill-opacity="0.12"/>
+<text x="74" y="324" text-anchor="middle" font-size="13" fill="#ff4d6d">⚠</text>
+<text x="475" y="318" text-anchor="end" font-family="Vazirmatn" font-size="12" font-weight="600" fill="#f4f6ff">سرور France-PAR-02 آفلاین شد</text>
+<text x="475" y="332" text-anchor="end" font-family="JetBrains Mono" font-size="9" fill="#5e6585">3 health-check ناموفق · از pool خارج</text>
+<rect x="60" y="347" width="28" height="28" rx="8" fill="#ffb547" fill-opacity="0.12"/>
+<text x="74" y="366" text-anchor="middle" font-size="13" fill="#ffb547">◷</text>
+<text x="475" y="360" text-anchor="end" font-family="Vazirmatn" font-size="12" font-weight="600" fill="#f4f6ff">پینگ Turkey-IST بالا رفت</text>
+<text x="475" y="374" text-anchor="end" font-family="JetBrains Mono" font-size="9" fill="#5e6585">میانگین: 187ms (آستانه: 150ms)</text>
+<rect x="60" y="389" width="28" height="28" rx="8" fill="#ffb547" fill-opacity="0.12"/>
+<text x="74" y="408" text-anchor="middle" font-size="13" fill="#ffb547">▣</text>
+<text x="475" y="402" text-anchor="end" font-family="Vazirmatn" font-size="12" font-weight="600" fill="#f4f6ff">سهمیه ماهانه US-NY: 80%</text>
+<text x="475" y="416" text-anchor="end" font-family="JetBrains Mono" font-size="9" fill="#5e6585">40GB از 50GB استفاده شده</text>
+<rect x="60" y="431" width="28" height="28" rx="8" fill="#00ffd1" fill-opacity="0.12"/>
+<text x="74" y="450" text-anchor="middle" font-size="13" fill="#00ffd1">ℹ</text>
+<text x="475" y="444" text-anchor="end" font-family="Vazirmatn" font-size="12" font-weight="600" fill="#f4f6ff">وزن DE-FRA به‌روز شد</text>
+<text x="475" y="458" text-anchor="end" font-family="JetBrains Mono" font-size="9" fill="#5e6585">auto-tune: 5 → 7 (بر اساس performance)</text>
+<rect x="520" y="260" width="440" height="240" rx="20" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="938" y="290" text-anchor="end" font-family="Syne, sans-serif" font-size="15" font-weight="700" fill="#f4f6ff">وضعیت بالانسر</text>
+<text x="938" y="306" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#5e6585">// configuration snapshot</text>
+<rect x="540" y="320" width="400" height="34" rx="10" fill="#ffffff" fill-opacity="0.04"/>
+<text x="555" y="340" font-family="Vazirmatn" font-size="11" fill="#5e6585">الگوریتم فعال</text>
+<text x="925" y="340" text-anchor="end" font-family="Vazirmatn" font-size="13" font-weight="600" fill="#00ffd1">بر اساس کم‌ترین پینگ</text>
+<rect x="540" y="364" width="400" height="34" rx="10" fill="#ffffff" fill-opacity="0.04"/>
+<text x="555" y="384" font-family="Vazirmatn" font-size="11" fill="#5e6585">سرورها</text>
+<text x="925" y="384" text-anchor="end" font-family="Vazirmatn" font-size="13" font-weight="600" fill="#f4f6ff">9 / 10 آنلاین</text>
+<rect x="540" y="408" width="400" height="34" rx="10" fill="#ffffff" fill-opacity="0.04"/>
+<text x="555" y="428" font-family="Vazirmatn" font-size="11" fill="#5e6585">Xray Core</text>
+<text x="925" y="428" text-anchor="end" font-family="Vazirmatn" font-size="13" font-weight="600" fill="#00ffa3">✓ فعال</text>
+<rect x="540" y="450" width="400" height="36" rx="12" fill="url(#primary)"/>
+<text x="740" y="473" text-anchor="middle" font-family="Vazirmatn" font-size="13" font-weight="700" fill="#001a14">↗ مشاهده آمار زنده</text>
+<rect x="40" y="520" width="920" height="220" rx="20" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="938" y="550" text-anchor="end" font-family="Syne, sans-serif" font-size="15" font-weight="700" fill="#f4f6ff">دسترسی سریع</text>
+<text x="938" y="566" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#5e6585">// shortcuts</text>
+<rect x="60" y="580" width="285" height="60" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+<rect x="75" y="594" width="32" height="32" rx="10" fill="#00ffd1" fill-opacity="0.08"/>
+<text x="91" y="613" text-anchor="middle" font-size="14" fill="#00ffd1">▤</text>
+<text x="325" y="605" text-anchor="end" font-family="Syne" font-size="13" font-weight="700" fill="#f4f6ff">مدیریت سرورها</text>
+<text x="325" y="624" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#5e6585">افزودن، ویرایش و حذف</text>
+<rect x="355" y="580" width="285" height="60" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+<rect x="370" y="594" width="32" height="32" rx="10" fill="#00ffd1" fill-opacity="0.08"/>
+<text x="386" y="613" text-anchor="middle" font-size="14" fill="#00ffd1">◈</text>
+<text x="620" y="605" text-anchor="end" font-family="Syne" font-size="13" font-weight="700" fill="#f4f6ff">قوانین مسیریابی</text>
+<text x="620" y="624" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#5e6585">هدایت دامنه‌ها</text>
+<rect x="650" y="580" width="285" height="60" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+<rect x="665" y="594" width="32" height="32" rx="10" fill="#00ffd1" fill-opacity="0.08"/>
+<text x="681" y="613" text-anchor="middle" font-size="14" fill="#00ffd1">⇅</text>
+<text x="915" y="605" text-anchor="end" font-family="Syne" font-size="13" font-weight="700" fill="#f4f6ff">الگوریتم بالانس</text>
+<text x="915" y="624" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#5e6585">انتخاب از ۶ روش</text>
+<rect x="60" y="650" width="285" height="60" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+<rect x="75" y="664" width="32" height="32" rx="10" fill="#00ffd1" fill-opacity="0.08"/>
+<text x="91" y="683" text-anchor="middle" font-size="14" fill="#00ffd1">✦</text>
+<text x="325" y="675" text-anchor="end" font-family="Syne" font-size="13" font-weight="700" fill="#f4f6ff">هیت‌مپ مصرف</text>
+<text x="325" y="694" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#5e6585">تحلیل ساعتی</text>
+<rect x="355" y="650" width="285" height="60" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+<rect x="370" y="664" width="32" height="32" rx="10" fill="#00ffd1" fill-opacity="0.08"/>
+<text x="386" y="683" text-anchor="middle" font-size="14" fill="#00ffd1">◆</text>
+<text x="620" y="675" text-anchor="end" font-family="Syne" font-size="13" font-weight="700" fill="#f4f6ff">DNS هوشمند</text>
+<text x="620" y="694" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#5e6585">حفاظت از نشتی</text>
+<rect x="650" y="650" width="285" height="60" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+<rect x="665" y="664" width="32" height="32" rx="10" fill="#00ffd1" fill-opacity="0.08"/>
+<text x="681" y="683" text-anchor="middle" font-size="14" fill="#00ffd1">☁</text>
+<text x="915" y="675" text-anchor="end" font-family="Syne" font-size="13" font-weight="700" fill="#f4f6ff">پشتیبان‌گیری</text>
+<text x="915" y="694" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#5e6585">import / export</text>
+<g transform="translate(40,750)">
+  <rect width="920" height="36" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="20" y="23" font-family="JetBrains Mono, monospace" font-size="10" fill="#a8b0c9">✓ Core: Xray v25.3.6 · Goroutines: 24 · RAM: 184MB · SOCKS: :10808 · HTTP: :10809</text>
+  <text x="900" y="23" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#00ffa3">● healthy</text>
+</g></svg>

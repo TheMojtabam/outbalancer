@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800">
+
+<defs>
+  <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0" stop-color="#05060d"/>
+    <stop offset="1" stop-color="#0a0d1a"/>
+  </linearGradient>
+  <radialGradient id="glow1" cx="0.85" cy="-0.1" r="0.8">
+    <stop offset="0" stop-color="#7c5cff" stop-opacity="0.18"/>
+    <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="glow2" cx="0.1" cy="1.1" r="0.8">
+    <stop offset="0" stop-color="#00ffd1" stop-opacity="0.12"/>
+    <stop offset="1" stop-color="#00ffd1" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="card" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0.07"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity="0.04"/>
+  </linearGradient>
+  <linearGradient id="accent" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#00ffd1"/>
+    <stop offset="1" stop-color="#7c5cff"/>
+  </linearGradient>
+  <linearGradient id="primary" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#00ffd1"/>
+    <stop offset="1" stop-color="#00cfa6"/>
+  </linearGradient>
+  <linearGradient id="brand" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0" stop-color="#00ffd1"/>
+    <stop offset="0.5" stop-color="#7c5cff"/>
+    <stop offset="1" stop-color="#ff5c87"/>
+  </linearGradient>
+  <linearGradient id="trafficGreen" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="#00ffd1" stop-opacity="0.4"/>
+    <stop offset="1" stop-color="#00ffd1" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="trafficPurple" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="#7c5cff" stop-opacity="0.35"/>
+    <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="trafficPink" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="#ff5c87" stop-opacity="0.3"/>
+    <stop offset="1" stop-color="#ff5c87" stop-opacity="0"/>
+  </linearGradient>
+  <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+    <path d="M 56 0 L 0 0 0 56" fill="none" stroke="#ffffff" stroke-opacity="0.018" stroke-width="1"/>
+  </pattern>
+</defs>
+<rect width="100%" height="100%" fill="url(#bg)"/>
+<rect width="100%" height="100%" fill="url(#glow1)"/>
+<rect width="100%" height="100%" fill="url(#glow2)"/>
+<rect width="100%" height="100%" fill="url(#grid)"/><rect x="1000" y="0" width="280" height="800" fill="#0d1124" opacity="0.85"/>
+<line x1="1000" y1="0" x2="1000" y2="800" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+<g transform="translate(1020,30)">
+  <rect width="44" height="44" rx="12" fill="url(#brand)"/>
+  <rect x="3" y="3" width="38" height="38" rx="9" fill="#0a0d1a"/>
+  <text x="22" y="30" text-anchor="middle" font-size="20" fill="#00ffd1" font-family="Vazirmatn, sans-serif">⚡</text>
+  <text x="60" y="22" font-family="Syne, sans-serif" font-size="17" font-weight="800" fill="#fff">OutBalancer</text>
+  <text x="60" y="36" font-family="JetBrains Mono, monospace" font-size="9" fill="#5e6585" letter-spacing="2">v0.1.0 · CORE</text>
+</g>
+<line x1="1020" y1="92" x2="1260" y2="92" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="1240" y="120" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#5e6585" letter-spacing="2">— داشبورد</text>
+<g>
+  <rect x="1020" y="132" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="152" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">نمای کلی ▦</text></g>
+<g>
+  <rect x="1020" y="168" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="188" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">آمار زنده ↗</text>
+  <rect x="1030" y="175" width="34" height="18" rx="6" fill="#00ffd1" fill-opacity="0.15"/>
+  <text x="1047" y="187" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#00ffd1" font-weight="700">LIVE</text></g><rect x="1257" y="209" width="3" height="22" rx="2" fill="#00ffd1"/>
+<g>
+  <rect x="1020" y="204" width="220" height="32" rx="11" fill="#00ffd1" fill-opacity="0.1" stroke="#00ffd1" stroke-opacity="0.18"/>
+  <text x="1228" y="224" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#f4f6ff">هیت‌مپ مصرف ✦</text></g>
+<text x="1240" y="250" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#5e6585" letter-spacing="2">— پیکربندی</text>
+<g>
+  <rect x="1020" y="262" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="282" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">سرورها ▤</text>
+  <rect x="1030" y="269" width="34" height="18" rx="6" fill="#00ffd1" fill-opacity="0.15"/>
+  <text x="1047" y="281" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#00ffd1" font-weight="700">10</text></g>
+<g>
+  <rect x="1020" y="298" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="318" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">قوانین مسیریابی ◈</text></g>
+<g>
+  <rect x="1020" y="334" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="354" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">الگوریتم بالانس ⇅</text></g>
+<g>
+  <rect x="1020" y="370" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="390" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">Speed Boost ▲</text>
+  <rect x="1030" y="377" width="34" height="18" rx="6" fill="#ff5c87" fill-opacity="0.15"/>
+  <text x="1047" y="389" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#ff5c87" font-weight="700">★</text></g>
+<g>
+  <rect x="1020" y="406" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="426" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">پروفایل‌ها ❍</text></g>
+<g>
+  <rect x="1020" y="442" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="462" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">زمانبندی ⊙</text></g>
+<text x="1240" y="488" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#5e6585" letter-spacing="2">— پیشرفته</text>
+<g>
+  <rect x="1020" y="500" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="520" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">هشدارها ◉</text>
+  <rect x="1030" y="507" width="34" height="18" rx="6" fill="#00ffd1" fill-opacity="0.15"/>
+  <text x="1047" y="519" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#00ffd1" font-weight="700">3</text></g>
+<g>
+  <rect x="1020" y="536" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="556" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">DNS هوشمند ◆</text></g>
+<g>
+  <rect x="1020" y="572" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="592" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">API &amp; Webhooks ⌥</text></g>
+<g>
+  <rect x="1020" y="608" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="628" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">لاگ‌ها ≡</text></g>
+<text x="1240" y="654" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#5e6585" letter-spacing="2">— سیستم</text>
+<g>
+  <rect x="1020" y="666" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="686" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">تنظیمات ⚙</text></g>
+<g>
+  <rect x="1020" y="702" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="722" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">پشتیبان‌گیری ☁</text></g>
+<g transform="translate(1020,720)">
+  <rect width="220" height="58" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <circle cx="36" cy="29" r="18" fill="url(#brand)"/>
+  <text x="36" y="35" text-anchor="middle" font-family="Vazirmatn" font-size="14" font-weight="700" fill="#fff">A</text>
+  <text x="60" y="26" font-family="Vazirmatn" font-size="13" font-weight="600" fill="#f4f6ff">Admin</text>
+  <text x="60" y="40" font-family="JetBrains Mono" font-size="10" fill="#5e6585">SUPERUSER</text>
+  <circle cx="200" cy="30" r="4" fill="#00ffa3" filter="url(#glow)"/>
+</g>
+<g transform="translate(40,30)">
+  <text x="920" y="28" text-anchor="end" font-family="Syne, sans-serif" font-size="28" font-weight="700" fill="#fff">هیت‌مپ <tspan fill="url(#accent)">مصرف</tspan></text>
+  <text x="920" y="50" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="11" fill="#5e6585">// hour × day · last 7 days</text>
+
+  <rect x="120" y="14" width="240" height="38" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="135" y="38" font-family="Vazirmatn, sans-serif" font-size="14" fill="#5e6585">⌕</text>
+  <text x="160" y="38" font-family="Vazirmatn, sans-serif" font-size="12" fill="#5e6585">جستجو...</text>
+  <rect x="320" y="22" width="32" height="20" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="336" y="36" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#5e6585">⌘K</text>
+
+  <rect x="380" y="14" width="38" height="38" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="399" y="38" text-anchor="middle" font-size="14">◉</text>
+  <circle cx="411" cy="22" r="4" fill="#ff5c87"/>
+
+  <rect x="430" y="14" width="38" height="38" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="449" y="38" text-anchor="middle" font-size="14">☾</text>
+
+  <rect x="478" y="14" width="170" height="38" rx="12" fill="url(#primary)"/>
+  <text x="563" y="38" text-anchor="middle" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="700" fill="#001a14">+ کانفیگ جدید</text>
+</g>
+<rect x="40" y="100" width="920" height="360" rx="20" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="938" y="130" text-anchor="end" font-family="Syne, sans-serif" font-size="15" font-weight="700" fill="#f4f6ff">نمودار حرارتی مصرف</text>
+<text x="938" y="146" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#5e6585">// 7 day × 24 hour</text><text x="146" y="190" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#5e6585">00</text><text x="242" y="190" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#5e6585">03</text><text x="338" y="190" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#5e6585">06</text><text x="434" y="190" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#5e6585">09</text><text x="530" y="190" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#5e6585">12</text><text x="626" y="190" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#5e6585">15</text><text x="722" y="190" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#5e6585">18</text><text x="818" y="190" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#5e6585">21</text><text x="120" y="215" text-anchor="end" font-family="Vazirmatn" font-size="10" fill="#a8b0c9">شنبه</text><rect x="130" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.05"/><rect x="162" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.12"/><rect x="194" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.10"/><rect x="226" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.08"/><rect x="258" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.06"/><rect x="290" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.13"/><rect x="322" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.11"/><rect x="354" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.09"/><rect x="386" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.07"/><rect x="418" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.29"/><rect x="450" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.23"/><rect x="482" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.38"/><rect x="514" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.32"/><rect x="546" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.26"/><rect x="578" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.20"/><rect x="610" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.35"/><rect x="642" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.29"/><rect x="674" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.23"/><rect x="706" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.66"/><rect x="738" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.58"/><rect x="770" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.50"/><rect x="802" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.62"/><rect x="834" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.54"/><rect x="866" y="200" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.66"/><text x="120" y="239" text-anchor="end" font-family="Vazirmatn" font-size="10" fill="#a8b0c9">یکشنبه</text><rect x="130" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.08"/><rect x="162" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.06"/><rect x="194" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.13"/><rect x="226" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.11"/><rect x="258" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.09"/><rect x="290" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.07"/><rect x="322" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.05"/><rect x="354" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.12"/><rect x="386" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.10"/><rect x="418" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.32"/><rect x="450" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.26"/><rect x="482" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.20"/><rect x="514" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.35"/><rect x="546" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.29"/><rect x="578" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.23"/><rect x="610" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.38"/><rect x="642" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.32"/><rect x="674" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.26"/><rect x="706" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.50"/><rect x="738" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.62"/><rect x="770" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.54"/><rect x="802" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.66"/><rect x="834" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.58"/><rect x="866" y="224" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.50"/><text x="120" y="263" text-anchor="end" font-family="Vazirmatn" font-size="10" fill="#a8b0c9">دوشنبه</text><rect x="130" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.11"/><rect x="162" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.09"/><rect x="194" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.07"/><rect x="226" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.05"/><rect x="258" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.12"/><rect x="290" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.10"/><rect x="322" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.08"/><rect x="354" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.06"/><rect x="386" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.13"/><rect x="418" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.35"/><rect x="450" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.29"/><rect x="482" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.23"/><rect x="514" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.38"/><rect x="546" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.32"/><rect x="578" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.26"/><rect x="610" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.20"/><rect x="642" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.35"/><rect x="674" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.29"/><rect x="706" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.54"/><rect x="738" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.66"/><rect x="770" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.58"/><rect x="802" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.50"/><rect x="834" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.62"/><rect x="866" y="248" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.54"/><text x="120" y="287" text-anchor="end" font-family="Vazirmatn" font-size="10" fill="#a8b0c9">سه‌شنبه</text><rect x="130" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.05"/><rect x="162" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.12"/><rect x="194" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.10"/><rect x="226" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.08"/><rect x="258" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.06"/><rect x="290" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.13"/><rect x="322" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.11"/><rect x="354" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.09"/><rect x="386" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.07"/><rect x="418" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.38"/><rect x="450" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.32"/><rect x="482" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.26"/><rect x="514" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.20"/><rect x="546" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.35"/><rect x="578" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.29"/><rect x="610" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.23"/><rect x="642" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.38"/><rect x="674" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.32"/><rect x="706" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.58"/><rect x="738" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.50"/><rect x="770" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.62"/><rect x="802" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.54"/><rect x="834" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.66"/><rect x="866" y="272" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.58"/><text x="120" y="311" text-anchor="end" font-family="Vazirmatn" font-size="10" fill="#a8b0c9">چهارشنبه</text><rect x="130" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.08"/><rect x="162" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.06"/><rect x="194" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.13"/><rect x="226" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.11"/><rect x="258" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.09"/><rect x="290" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.07"/><rect x="322" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.05"/><rect x="354" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.12"/><rect x="386" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.10"/><rect x="418" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.20"/><rect x="450" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.35"/><rect x="482" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.29"/><rect x="514" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.23"/><rect x="546" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.38"/><rect x="578" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.32"/><rect x="610" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.26"/><rect x="642" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.20"/><rect x="674" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.35"/><rect x="706" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.62"/><rect x="738" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.54"/><rect x="770" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.66"/><rect x="802" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.58"/><rect x="834" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.50"/><rect x="866" y="296" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.62"/><text x="120" y="335" text-anchor="end" font-family="Vazirmatn" font-size="10" fill="#a8b0c9">پنج‌شنبه</text><rect x="130" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.11"/><rect x="162" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.09"/><rect x="194" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.07"/><rect x="226" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.05"/><rect x="258" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.12"/><rect x="290" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.10"/><rect x="322" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.08"/><rect x="354" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.06"/><rect x="386" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.13"/><rect x="418" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.23"/><rect x="450" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.38"/><rect x="482" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.32"/><rect x="514" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.26"/><rect x="546" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.20"/><rect x="578" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.35"/><rect x="610" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.29"/><rect x="642" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.23"/><rect x="674" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.38"/><rect x="706" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.66"/><rect x="738" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.58"/><rect x="770" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.50"/><rect x="802" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.62"/><rect x="834" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.54"/><rect x="866" y="320" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.66"/><text x="120" y="359" text-anchor="end" font-family="Vazirmatn" font-size="10" fill="#a8b0c9">جمعه</text><rect x="130" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.05"/><rect x="162" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.12"/><rect x="194" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.10"/><rect x="226" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.08"/><rect x="258" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.06"/><rect x="290" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.13"/><rect x="322" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.11"/><rect x="354" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.09"/><rect x="386" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.07"/><rect x="418" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.26"/><rect x="450" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.20"/><rect x="482" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.35"/><rect x="514" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.29"/><rect x="546" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.23"/><rect x="578" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.38"/><rect x="610" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.32"/><rect x="642" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.26"/><rect x="674" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.20"/><rect x="706" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.50"/><rect x="738" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.62"/><rect x="770" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.54"/><rect x="802" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.66"/><rect x="834" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.58"/><rect x="866" y="344" width="29" height="21" rx="3" fill="#00ffd1" fill-opacity="0.50"/><g transform="translate(60,420)">
+  <text x="0" y="13" font-family="JetBrains Mono" font-size="10" fill="#5e6585">کم</text>
+  <rect x="30" y="2" width="20" height="14" rx="3" fill="#00ffd1" fill-opacity="0.05"/>
+  <rect x="54" y="2" width="20" height="14" rx="3" fill="#00ffd1" fill-opacity="0.2"/>
+  <rect x="78" y="2" width="20" height="14" rx="3" fill="#00ffd1" fill-opacity="0.4"/>
+  <rect x="102" y="2" width="20" height="14" rx="3" fill="#00ffd1" fill-opacity="0.65"/>
+  <rect x="126" y="2" width="20" height="14" rx="3" fill="#00ffd1" fill-opacity="0.9"/>
+  <text x="155" y="13" font-family="JetBrains Mono" font-size="10" fill="#5e6585">زیاد</text>
+</g>
+<rect x="40" y="480" width="460" height="260" rx="20" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="478" y="510" text-anchor="end" font-family="Syne, sans-serif" font-size="15" font-weight="700" fill="#f4f6ff">پر مصرف‌ترین دامنه‌ها</text>
+<text x="478" y="526" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#5e6585">// last 24 hours</text>
+<rect x="60" y="540" width="24" height="24" rx="6" fill="#ff0000" fill-opacity="0.15"/>
+<text x="72" y="555" text-anchor="middle" font-size="12" fill="#ff0000">▶</text>
+<text x="100" y="555" font-family="JetBrains Mono" font-size="12" fill="#a8b0c9">youtube.com</text>
+<text x="480" y="555" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#00ffd1">412 GB</text>
+<rect x="60" y="576" width="24" height="24" rx="6" fill="#1ed760" fill-opacity="0.15"/>
+<text x="72" y="591" text-anchor="middle" font-size="12" fill="#1ed760">♫</text>
+<text x="100" y="591" font-family="JetBrains Mono" font-size="12" fill="#a8b0c9">spotify.com</text>
+<text x="480" y="591" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#00ffd1">187 GB</text>
+<rect x="60" y="612" width="24" height="24" rx="6" fill="#0088cc" fill-opacity="0.15"/>
+<text x="72" y="627" text-anchor="middle" font-size="12" fill="#0088cc">✈</text>
+<text x="100" y="627" font-family="JetBrains Mono" font-size="12" fill="#a8b0c9">telegram.org</text>
+<text x="480" y="627" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#00ffd1">94 GB</text>
+<rect x="60" y="648" width="24" height="24" rx="6" fill="#e50914" fill-opacity="0.15"/>
+<text x="72" y="663" text-anchor="middle" font-size="12" fill="#e50914">▶</text>
+<text x="100" y="663" font-family="JetBrains Mono" font-size="12" fill="#a8b0c9">netflix.com</text>
+<text x="480" y="663" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#00ffd1">61 GB</text>
+<rect x="60" y="684" width="24" height="24" rx="6" fill="#aaaaaa" fill-opacity="0.15"/>
+<text x="72" y="699" text-anchor="middle" font-size="12" fill="#aaaaaa">⌥</text>
+<text x="100" y="699" font-family="JetBrains Mono" font-size="12" fill="#a8b0c9">github.com</text>
+<text x="480" y="699" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="700" fill="#00ffd1">38 GB</text>
+<rect x="520" y="480" width="440" height="260" rx="20" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="938" y="510" text-anchor="end" font-family="Syne, sans-serif" font-size="15" font-weight="700" fill="#f4f6ff">تحلیل دوره</text>
+<text x="938" y="526" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#5e6585">// last 7 days</text>
+<rect x="540" y="540" width="400" height="28" rx="8" fill="#ffffff" fill-opacity="0.04"/>
+<text x="555" y="558" font-family="Vazirmatn" font-size="11" fill="#5e6585">کل ترافیک</text>
+<text x="925" y="558" text-anchor="end" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#00ffd1">9.2 TB</text>
+<rect x="540" y="576" width="400" height="28" rx="8" fill="#ffffff" fill-opacity="0.04"/>
+<text x="555" y="594" font-family="Vazirmatn" font-size="11" fill="#5e6585">اوج مصرف</text>
+<text x="925" y="594" text-anchor="end" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#ff5c87">21:00 (پنج‌شنبه)</text>
+<rect x="540" y="612" width="400" height="28" rx="8" fill="#ffffff" fill-opacity="0.04"/>
+<text x="555" y="630" font-family="Vazirmatn" font-size="11" fill="#5e6585">کم‌ترین مصرف</text>
+<text x="925" y="630" text-anchor="end" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#a8b0c9">05:00 (دوشنبه)</text>
+<rect x="540" y="648" width="400" height="28" rx="8" fill="#ffffff" fill-opacity="0.04"/>
+<text x="555" y="666" font-family="Vazirmatn" font-size="11" fill="#5e6585">میانگین روزانه</text>
+<text x="925" y="666" text-anchor="end" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#7c5cff">1.31 TB</text>
+<rect x="540" y="684" width="400" height="28" rx="8" fill="#ffffff" fill-opacity="0.04"/>
+<text x="555" y="702" font-family="Vazirmatn" font-size="11" fill="#5e6585">رشد نسبت به هفته قبل</text>
+<text x="925" y="702" text-anchor="end" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#00ffa3">+12.4%</text>
+<g transform="translate(40,750)">
+  <rect width="920" height="36" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="20" y="23" font-family="JetBrains Mono, monospace" font-size="10" fill="#a8b0c9">✓ Core: Xray v25.3.6 · Goroutines: 24 · RAM: 184MB · SOCKS: :10808 · HTTP: :10809</text>
+  <text x="900" y="23" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#00ffa3">● healthy</text>
+</g></svg>

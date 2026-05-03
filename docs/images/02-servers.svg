@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800">
+
+<defs>
+  <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0" stop-color="#05060d"/>
+    <stop offset="1" stop-color="#0a0d1a"/>
+  </linearGradient>
+  <radialGradient id="glow1" cx="0.85" cy="-0.1" r="0.8">
+    <stop offset="0" stop-color="#7c5cff" stop-opacity="0.18"/>
+    <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="glow2" cx="0.1" cy="1.1" r="0.8">
+    <stop offset="0" stop-color="#00ffd1" stop-opacity="0.12"/>
+    <stop offset="1" stop-color="#00ffd1" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="card" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0.07"/>
+    <stop offset="1" stop-color="#ffffff" stop-opacity="0.04"/>
+  </linearGradient>
+  <linearGradient id="accent" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#00ffd1"/>
+    <stop offset="1" stop-color="#7c5cff"/>
+  </linearGradient>
+  <linearGradient id="primary" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#00ffd1"/>
+    <stop offset="1" stop-color="#00cfa6"/>
+  </linearGradient>
+  <linearGradient id="brand" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0" stop-color="#00ffd1"/>
+    <stop offset="0.5" stop-color="#7c5cff"/>
+    <stop offset="1" stop-color="#ff5c87"/>
+  </linearGradient>
+  <linearGradient id="trafficGreen" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="#00ffd1" stop-opacity="0.4"/>
+    <stop offset="1" stop-color="#00ffd1" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="trafficPurple" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="#7c5cff" stop-opacity="0.35"/>
+    <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="trafficPink" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="#ff5c87" stop-opacity="0.3"/>
+    <stop offset="1" stop-color="#ff5c87" stop-opacity="0"/>
+  </linearGradient>
+  <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+    <path d="M 56 0 L 0 0 0 56" fill="none" stroke="#ffffff" stroke-opacity="0.018" stroke-width="1"/>
+  </pattern>
+</defs>
+<rect width="100%" height="100%" fill="url(#bg)"/>
+<rect width="100%" height="100%" fill="url(#glow1)"/>
+<rect width="100%" height="100%" fill="url(#glow2)"/>
+<rect width="100%" height="100%" fill="url(#grid)"/><rect x="1000" y="0" width="280" height="800" fill="#0d1124" opacity="0.85"/>
+<line x1="1000" y1="0" x2="1000" y2="800" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+<g transform="translate(1020,30)">
+  <rect width="44" height="44" rx="12" fill="url(#brand)"/>
+  <rect x="3" y="3" width="38" height="38" rx="9" fill="#0a0d1a"/>
+  <text x="22" y="30" text-anchor="middle" font-size="20" fill="#00ffd1" font-family="Vazirmatn, sans-serif">⚡</text>
+  <text x="60" y="22" font-family="Syne, sans-serif" font-size="17" font-weight="800" fill="#fff">OutBalancer</text>
+  <text x="60" y="36" font-family="JetBrains Mono, monospace" font-size="9" fill="#5e6585" letter-spacing="2">v0.1.0 · CORE</text>
+</g>
+<line x1="1020" y1="92" x2="1260" y2="92" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="1240" y="120" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#5e6585" letter-spacing="2">— داشبورد</text>
+<g>
+  <rect x="1020" y="132" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="152" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">نمای کلی ▦</text></g>
+<g>
+  <rect x="1020" y="168" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="188" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">آمار زنده ↗</text>
+  <rect x="1030" y="175" width="34" height="18" rx="6" fill="#00ffd1" fill-opacity="0.15"/>
+  <text x="1047" y="187" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#00ffd1" font-weight="700">LIVE</text></g>
+<g>
+  <rect x="1020" y="204" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="224" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">هیت‌مپ مصرف ✦</text></g>
+<text x="1240" y="250" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#5e6585" letter-spacing="2">— پیکربندی</text><rect x="1257" y="267" width="3" height="22" rx="2" fill="#00ffd1"/>
+<g>
+  <rect x="1020" y="262" width="220" height="32" rx="11" fill="#00ffd1" fill-opacity="0.1" stroke="#00ffd1" stroke-opacity="0.18"/>
+  <text x="1228" y="282" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#f4f6ff">سرورها ▤</text>
+  <rect x="1030" y="269" width="34" height="18" rx="6" fill="#00ffd1" fill-opacity="0.15"/>
+  <text x="1047" y="281" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#00ffd1" font-weight="700">10</text></g>
+<g>
+  <rect x="1020" y="298" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="318" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">قوانین مسیریابی ◈</text></g>
+<g>
+  <rect x="1020" y="334" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="354" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">الگوریتم بالانس ⇅</text></g>
+<g>
+  <rect x="1020" y="370" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="390" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">Speed Boost ▲</text>
+  <rect x="1030" y="377" width="34" height="18" rx="6" fill="#ff5c87" fill-opacity="0.15"/>
+  <text x="1047" y="389" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#ff5c87" font-weight="700">★</text></g>
+<g>
+  <rect x="1020" y="406" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="426" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">پروفایل‌ها ❍</text></g>
+<g>
+  <rect x="1020" y="442" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="462" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">زمانبندی ⊙</text></g>
+<text x="1240" y="488" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#5e6585" letter-spacing="2">— پیشرفته</text>
+<g>
+  <rect x="1020" y="500" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="520" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">هشدارها ◉</text>
+  <rect x="1030" y="507" width="34" height="18" rx="6" fill="#00ffd1" fill-opacity="0.15"/>
+  <text x="1047" y="519" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#00ffd1" font-weight="700">3</text></g>
+<g>
+  <rect x="1020" y="536" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="556" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">DNS هوشمند ◆</text></g>
+<g>
+  <rect x="1020" y="572" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="592" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">API &amp; Webhooks ⌥</text></g>
+<g>
+  <rect x="1020" y="608" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="628" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">لاگ‌ها ≡</text></g>
+<text x="1240" y="654" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="9" fill="#5e6585" letter-spacing="2">— سیستم</text>
+<g>
+  <rect x="1020" y="666" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="686" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">تنظیمات ⚙</text></g>
+<g>
+  <rect x="1020" y="702" width="220" height="32" rx="11" fill="transparent" stroke="transparent"/>
+  <text x="1228" y="722" text-anchor="end" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="500" fill="#a8b0c9">پشتیبان‌گیری ☁</text></g>
+<g transform="translate(1020,720)">
+  <rect width="220" height="58" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <circle cx="36" cy="29" r="18" fill="url(#brand)"/>
+  <text x="36" y="35" text-anchor="middle" font-family="Vazirmatn" font-size="14" font-weight="700" fill="#fff">A</text>
+  <text x="60" y="26" font-family="Vazirmatn" font-size="13" font-weight="600" fill="#f4f6ff">Admin</text>
+  <text x="60" y="40" font-family="JetBrains Mono" font-size="10" fill="#5e6585">SUPERUSER</text>
+  <circle cx="200" cy="30" r="4" fill="#00ffa3" filter="url(#glow)"/>
+</g>
+<g transform="translate(40,30)">
+  <text x="920" y="28" text-anchor="end" font-family="Syne, sans-serif" font-size="28" font-weight="700" fill="#fff"> <tspan fill="url(#accent)">سرورها</tspan></text>
+  <text x="920" y="50" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="11" fill="#5e6585">// مدیریت کانفیگ‌ها · ۱۰ سرور · drag to reorder</text>
+
+  <rect x="120" y="14" width="240" height="38" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="135" y="38" font-family="Vazirmatn, sans-serif" font-size="14" fill="#5e6585">⌕</text>
+  <text x="160" y="38" font-family="Vazirmatn, sans-serif" font-size="12" fill="#5e6585">جستجو...</text>
+  <rect x="320" y="22" width="32" height="20" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="336" y="36" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#5e6585">⌘K</text>
+
+  <rect x="380" y="14" width="38" height="38" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="399" y="38" text-anchor="middle" font-size="14">◉</text>
+  <circle cx="411" cy="22" r="4" fill="#ff5c87"/>
+
+  <rect x="430" y="14" width="38" height="38" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="449" y="38" text-anchor="middle" font-size="14">☾</text>
+
+  <rect x="478" y="14" width="170" height="38" rx="12" fill="url(#primary)"/>
+  <text x="563" y="38" text-anchor="middle" font-family="Vazirmatn, sans-serif" font-size="13" font-weight="700" fill="#001a14">+ کانفیگ جدید</text>
+</g>
+<rect x="40" y="100" width="920" height="640" rx="20" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="938" y="130" text-anchor="end" font-family="Syne, sans-serif" font-size="15" font-weight="700" fill="#f4f6ff">سرورهای متصل</text>
+<text x="938" y="146" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#5e6585">// click on a row for detail</text>
+<rect x="60" y="115" width="66" height="26" rx="10" fill="#00ffd1" fill-opacity="0.08" stroke="#00ffd1" stroke-opacity="0.3"/>
+<text x="93" y="132" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#00ffd1" font-weight="600">همه</text>
+<rect x="134" y="115" width="108" height="26" rx="10" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="188" y="132" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#a8b0c9" font-weight="600">آنلاین</text>
+<rect x="250" y="115" width="80" height="26" rx="10" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="290" y="132" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#a8b0c9" font-weight="600">degraded</text>
+<rect x="338" y="115" width="108" height="26" rx="10" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="392" y="132" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#a8b0c9" font-weight="600">آفلاین</text>
+<rect x="454" y="115" width="80" height="26" rx="10" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="494" y="132" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#a8b0c9" font-weight="600">Test All</text>
+<rect x="542" y="115" width="101" height="26" rx="10" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="592" y="132" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#a8b0c9" font-weight="600">Bulk Import</text>
+<rect x="651" y="115" width="157" height="26" rx="10" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="729" y="132" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#a8b0c9" font-weight="600">+ سرور جدید</text><text x="90" y="180" font-family="JetBrains Mono" font-size="9" fill="#5e6585" letter-spacing="1.5" text-anchor="end">سرور</text><text x="380" y="180" font-family="JetBrains Mono" font-size="9" fill="#5e6585" letter-spacing="1.5" text-anchor="end">وضعیت</text><text x="480" y="180" font-family="JetBrains Mono" font-size="9" fill="#5e6585" letter-spacing="1.5" text-anchor="end">پینگ</text><text x="610" y="180" font-family="JetBrains Mono" font-size="9" fill="#5e6585" letter-spacing="1.5" text-anchor="end">سرعت</text><text x="700" y="180" font-family="JetBrains Mono" font-size="9" fill="#5e6585" letter-spacing="1.5" text-anchor="end">کانکشن</text><text x="790" y="180" font-family="JetBrains Mono" font-size="9" fill="#5e6585" letter-spacing="1.5" text-anchor="end">وزن</text><text x="850" y="180" font-family="JetBrains Mono" font-size="9" fill="#5e6585" letter-spacing="1.5" text-anchor="end">نمره</text><text x="930" y="180" font-family="JetBrains Mono" font-size="9" fill="#5e6585" letter-spacing="1.5" text-anchor="end">عملیات</text><line x1="60" y1="190" x2="940" y2="190" stroke="#ffffff" stroke-opacity="0.08"/>
+<rect x="60" y="220" width="34" height="34" rx="9" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+<text x="77" y="242" text-anchor="middle" font-size="16">[DE]</text>
+<text x="380" y="233" text-anchor="end" font-family="Vazirmatn" font-size="13" font-weight="600" fill="#f4f6ff">Germany-FRA-01</text>
+<text x="380" y="247" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#5e6585">vless://...frankfurt:443</text>
+<rect x="395" y="228" width="76" height="22" rx="8" fill="#00ffa3" fill-opacity="0.12"/>
+<circle cx="408" cy="239" r="3" fill="#00ffa3"/>
+<text x="465" y="242" text-anchor="end" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#00ffa3">ONLINE</text>
+<rect x="490" y="235" width="60" height="5" rx="2" fill="#ffffff" fill-opacity="0.06"/>
+<rect x="490" y="235" width="10" height="5" rx="2" fill="#00ffa3"/>
+<text x="610" y="239" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#00ffa3">28ms</text><text x="685" y="239" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#f4f6ff">284 Mbps</text><text x="755" y="239" text-anchor="end" font-family="JetBrains Mono" font-size="11" fill="#a8b0c9">142</text>
+<rect x="785" y="230" width="40" height="20" rx="6" fill="#ffffff" fill-opacity="0.05"/>
+<text x="805" y="244" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="600" fill="#a8b0c9">7.0</text>
+<g transform="translate(845,228)">
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2.5"/>
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#00ffa3" stroke-width="2.5" stroke-linecap="round"
+          stroke-dasharray="94 100" transform="rotate(-90 14 14)"/>
+  <text x="14" y="18" text-anchor="middle" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#00ffa3">94</text>
+</g>
+<rect x="885" y="229" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="896" y="243" text-anchor="middle" font-size="10" fill="#a8b0c9">⚡</text>
+<rect x="912" y="229" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="923" y="243" text-anchor="middle" font-size="10" fill="#a8b0c9">✎</text><line x1="60" y1="264" x2="940" y2="264" stroke="#ffffff" stroke-opacity="0.04"/>
+<rect x="60" y="268" width="34" height="34" rx="9" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+<text x="77" y="290" text-anchor="middle" font-size="16">[NL]</text>
+<text x="380" y="281" text-anchor="end" font-family="Vazirmatn" font-size="13" font-weight="600" fill="#f4f6ff">Netherlands-AMS-01</text>
+<text x="380" y="295" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#5e6585">vless://...amsterdam:8443</text>
+<rect x="395" y="276" width="76" height="22" rx="8" fill="#00ffa3" fill-opacity="0.12"/>
+<circle cx="408" cy="287" r="3" fill="#00ffa3"/>
+<text x="465" y="290" text-anchor="end" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#00ffa3">ONLINE</text>
+<rect x="490" y="283" width="60" height="5" rx="2" fill="#ffffff" fill-opacity="0.06"/>
+<rect x="490" y="283" width="14" height="5" rx="2" fill="#00ffa3"/>
+<text x="610" y="287" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#00ffa3">35ms</text><text x="685" y="287" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#f4f6ff">198 Mbps</text><text x="755" y="287" text-anchor="end" font-family="JetBrains Mono" font-size="11" fill="#a8b0c9">98</text>
+<rect x="785" y="278" width="40" height="20" rx="6" fill="#ffffff" fill-opacity="0.05"/>
+<text x="805" y="292" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="600" fill="#a8b0c9">5.5</text>
+<g transform="translate(845,276)">
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2.5"/>
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#00ffa3" stroke-width="2.5" stroke-linecap="round"
+          stroke-dasharray="88 100" transform="rotate(-90 14 14)"/>
+  <text x="14" y="18" text-anchor="middle" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#00ffa3">88</text>
+</g>
+<rect x="885" y="277" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="896" y="291" text-anchor="middle" font-size="10" fill="#a8b0c9">⚡</text>
+<rect x="912" y="277" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="923" y="291" text-anchor="middle" font-size="10" fill="#a8b0c9">✎</text><line x1="60" y1="312" x2="940" y2="312" stroke="#ffffff" stroke-opacity="0.04"/>
+<rect x="60" y="316" width="34" height="34" rx="9" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+<text x="77" y="338" text-anchor="middle" font-size="16">[FI]</text>
+<text x="380" y="329" text-anchor="end" font-family="Vazirmatn" font-size="13" font-weight="600" fill="#f4f6ff">Finland-HEL-01</text>
+<text x="380" y="343" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#5e6585">vless://...helsinki:443</text>
+<rect x="395" y="324" width="76" height="22" rx="8" fill="#00ffa3" fill-opacity="0.12"/>
+<circle cx="408" cy="335" r="3" fill="#00ffa3"/>
+<text x="465" y="338" text-anchor="end" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#00ffa3">ONLINE</text>
+<rect x="490" y="331" width="60" height="5" rx="2" fill="#ffffff" fill-opacity="0.06"/>
+<rect x="490" y="331" width="19" height="5" rx="2" fill="#00ffa3"/>
+<text x="610" y="335" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#00ffa3">48ms</text><text x="685" y="335" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#f4f6ff">156 Mbps</text><text x="755" y="335" text-anchor="end" font-family="JetBrains Mono" font-size="11" fill="#a8b0c9">76</text>
+<rect x="785" y="326" width="40" height="20" rx="6" fill="#ffffff" fill-opacity="0.05"/>
+<text x="805" y="340" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="600" fill="#a8b0c9">4.0</text>
+<g transform="translate(845,324)">
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2.5"/>
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#00ffa3" stroke-width="2.5" stroke-linecap="round"
+          stroke-dasharray="82 100" transform="rotate(-90 14 14)"/>
+  <text x="14" y="18" text-anchor="middle" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#00ffa3">82</text>
+</g>
+<rect x="885" y="325" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="896" y="339" text-anchor="middle" font-size="10" fill="#a8b0c9">⚡</text>
+<rect x="912" y="325" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="923" y="339" text-anchor="middle" font-size="10" fill="#a8b0c9">✎</text><line x1="60" y1="360" x2="940" y2="360" stroke="#ffffff" stroke-opacity="0.04"/>
+<rect x="60" y="364" width="34" height="34" rx="9" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+<text x="77" y="386" text-anchor="middle" font-size="16">[TR]</text>
+<text x="380" y="377" text-anchor="end" font-family="Vazirmatn" font-size="13" font-weight="600" fill="#f4f6ff">Turkey-IST-01</text>
+<text x="380" y="391" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#5e6585">vless://...istanbul:2096</text>
+<rect x="395" y="372" width="76" height="22" rx="8" fill="#ffb547" fill-opacity="0.12"/>
+<circle cx="408" cy="383" r="3" fill="#ffb547"/>
+<text x="465" y="386" text-anchor="end" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#ffb547">DEGRADED</text>
+<rect x="490" y="379" width="60" height="5" rx="2" fill="#ffffff" fill-opacity="0.06"/>
+<rect x="490" y="379" width="46" height="5" rx="2" fill="#ffb547"/>
+<text x="610" y="383" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#ffb547">187ms</text><text x="685" y="383" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#f4f6ff">62 Mbps</text><text x="755" y="383" text-anchor="end" font-family="JetBrains Mono" font-size="11" fill="#a8b0c9">34</text>
+<rect x="785" y="374" width="40" height="20" rx="6" fill="#ffffff" fill-opacity="0.05"/>
+<text x="805" y="388" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="600" fill="#a8b0c9">2.0</text>
+<g transform="translate(845,372)">
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2.5"/>
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#ffb547" stroke-width="2.5" stroke-linecap="round"
+          stroke-dasharray="58 100" transform="rotate(-90 14 14)"/>
+  <text x="14" y="18" text-anchor="middle" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#ffb547">58</text>
+</g>
+<rect x="885" y="373" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="896" y="387" text-anchor="middle" font-size="10" fill="#a8b0c9">⚡</text>
+<rect x="912" y="373" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="923" y="387" text-anchor="middle" font-size="10" fill="#a8b0c9">✎</text><line x1="60" y1="408" x2="940" y2="408" stroke="#ffffff" stroke-opacity="0.04"/>
+<rect x="60" y="412" width="34" height="34" rx="9" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+<text x="77" y="434" text-anchor="middle" font-size="16">[FR]</text>
+<text x="380" y="425" text-anchor="end" font-family="Vazirmatn" font-size="13" font-weight="600" fill="#f4f6ff">France-PAR-02</text>
+<text x="380" y="439" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#5e6585">vless://...paris:443</text>
+<rect x="395" y="420" width="76" height="22" rx="8" fill="#ff4d6d" fill-opacity="0.12"/>
+<circle cx="408" cy="431" r="3" fill="#ff4d6d"/>
+<text x="465" y="434" text-anchor="end" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#ff4d6d">OFFLINE</text>
+<rect x="490" y="427" width="60" height="5" rx="2" fill="#ffffff" fill-opacity="0.06"/>
+<rect x="490" y="427" width="60" height="5" rx="2" fill="#ff4d6d"/>
+<text x="610" y="431" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#ff4d6d">timeout</text><text x="685" y="431" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#f4f6ff">— Mbps</text><text x="755" y="431" text-anchor="end" font-family="JetBrains Mono" font-size="11" fill="#a8b0c9">0</text>
+<rect x="785" y="422" width="40" height="20" rx="6" fill="#ffffff" fill-opacity="0.05"/>
+<text x="805" y="436" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="600" fill="#a8b0c9">0.0</text>
+<g transform="translate(845,420)">
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2.5"/>
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#ff4d6d" stroke-width="2.5" stroke-linecap="round"
+          stroke-dasharray="12 100" transform="rotate(-90 14 14)"/>
+  <text x="14" y="18" text-anchor="middle" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#ff4d6d">12</text>
+</g>
+<rect x="885" y="421" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="896" y="435" text-anchor="middle" font-size="10" fill="#a8b0c9">⚡</text>
+<rect x="912" y="421" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="923" y="435" text-anchor="middle" font-size="10" fill="#a8b0c9">✎</text><line x1="60" y1="456" x2="940" y2="456" stroke="#ffffff" stroke-opacity="0.04"/>
+<rect x="60" y="460" width="34" height="34" rx="9" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+<text x="77" y="482" text-anchor="middle" font-size="16">[US]</text>
+<text x="380" y="473" text-anchor="end" font-family="Vazirmatn" font-size="13" font-weight="600" fill="#f4f6ff">US-NY-01</text>
+<text x="380" y="487" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#5e6585">vless://...newyork:443</text>
+<rect x="395" y="468" width="76" height="22" rx="8" fill="#00ffa3" fill-opacity="0.12"/>
+<circle cx="408" cy="479" r="3" fill="#00ffa3"/>
+<text x="465" y="482" text-anchor="end" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#00ffa3">ONLINE</text>
+<rect x="490" y="475" width="60" height="5" rx="2" fill="#ffffff" fill-opacity="0.06"/>
+<rect x="490" y="475" width="33" height="5" rx="2" fill="#ffb547"/>
+<text x="610" y="479" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#ffb547">128ms</text><text x="685" y="479" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#f4f6ff">96 Mbps</text><text x="755" y="479" text-anchor="end" font-family="JetBrains Mono" font-size="11" fill="#a8b0c9">21</text>
+<rect x="785" y="470" width="40" height="20" rx="6" fill="#ffffff" fill-opacity="0.05"/>
+<text x="805" y="484" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="600" fill="#a8b0c9">3.0</text>
+<g transform="translate(845,468)">
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2.5"/>
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#ffb547" stroke-width="2.5" stroke-linecap="round"
+          stroke-dasharray="74 100" transform="rotate(-90 14 14)"/>
+  <text x="14" y="18" text-anchor="middle" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#ffb547">74</text>
+</g>
+<rect x="885" y="469" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="896" y="483" text-anchor="middle" font-size="10" fill="#a8b0c9">⚡</text>
+<rect x="912" y="469" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="923" y="483" text-anchor="middle" font-size="10" fill="#a8b0c9">✎</text><line x1="60" y1="504" x2="940" y2="504" stroke="#ffffff" stroke-opacity="0.04"/>
+<rect x="60" y="508" width="34" height="34" rx="9" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+<text x="77" y="530" text-anchor="middle" font-size="16">[SE]</text>
+<text x="380" y="521" text-anchor="end" font-family="Vazirmatn" font-size="13" font-weight="600" fill="#f4f6ff">Sweden-STO-01</text>
+<text x="380" y="535" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#5e6585">vless://...stockholm:443</text>
+<rect x="395" y="516" width="76" height="22" rx="8" fill="#00ffa3" fill-opacity="0.12"/>
+<circle cx="408" cy="527" r="3" fill="#00ffa3"/>
+<text x="465" y="530" text-anchor="end" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#00ffa3">ONLINE</text>
+<rect x="490" y="523" width="60" height="5" rx="2" fill="#ffffff" fill-opacity="0.06"/>
+<rect x="490" y="523" width="20" height="5" rx="2" fill="#00ffa3"/>
+<text x="610" y="527" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#00ffa3">52ms</text><text x="685" y="527" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#f4f6ff">134 Mbps</text><text x="755" y="527" text-anchor="end" font-family="JetBrains Mono" font-size="11" fill="#a8b0c9">52</text>
+<rect x="785" y="518" width="40" height="20" rx="6" fill="#ffffff" fill-opacity="0.05"/>
+<text x="805" y="532" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="600" fill="#a8b0c9">4.5</text>
+<g transform="translate(845,516)">
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2.5"/>
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#00ffa3" stroke-width="2.5" stroke-linecap="round"
+          stroke-dasharray="86 100" transform="rotate(-90 14 14)"/>
+  <text x="14" y="18" text-anchor="middle" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#00ffa3">86</text>
+</g>
+<rect x="885" y="517" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="896" y="531" text-anchor="middle" font-size="10" fill="#a8b0c9">⚡</text>
+<rect x="912" y="517" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="923" y="531" text-anchor="middle" font-size="10" fill="#a8b0c9">✎</text><line x1="60" y1="552" x2="940" y2="552" stroke="#ffffff" stroke-opacity="0.04"/>
+<rect x="60" y="556" width="34" height="34" rx="9" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+<text x="77" y="578" text-anchor="middle" font-size="16">[PL]</text>
+<text x="380" y="569" text-anchor="end" font-family="Vazirmatn" font-size="13" font-weight="600" fill="#f4f6ff">Poland-WAW-01</text>
+<text x="380" y="583" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#5e6585">vless://...warsaw:443</text>
+<rect x="395" y="564" width="76" height="22" rx="8" fill="#00ffa3" fill-opacity="0.12"/>
+<circle cx="408" cy="575" r="3" fill="#00ffa3"/>
+<text x="465" y="578" text-anchor="end" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#00ffa3">ONLINE</text>
+<rect x="490" y="571" width="60" height="5" rx="2" fill="#ffffff" fill-opacity="0.06"/>
+<rect x="490" y="571" width="25" height="5" rx="2" fill="#00ffa3"/>
+<text x="610" y="575" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#00ffa3">64ms</text><text x="685" y="575" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#f4f6ff">88 Mbps</text><text x="755" y="575" text-anchor="end" font-family="JetBrains Mono" font-size="11" fill="#a8b0c9">41</text>
+<rect x="785" y="566" width="40" height="20" rx="6" fill="#ffffff" fill-opacity="0.05"/>
+<text x="805" y="580" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="600" fill="#a8b0c9">3.5</text>
+<g transform="translate(845,564)">
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2.5"/>
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#00ffa3" stroke-width="2.5" stroke-linecap="round"
+          stroke-dasharray="78 100" transform="rotate(-90 14 14)"/>
+  <text x="14" y="18" text-anchor="middle" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#00ffa3">78</text>
+</g>
+<rect x="885" y="565" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="896" y="579" text-anchor="middle" font-size="10" fill="#a8b0c9">⚡</text>
+<rect x="912" y="565" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="923" y="579" text-anchor="middle" font-size="10" fill="#a8b0c9">✎</text><line x1="60" y1="600" x2="940" y2="600" stroke="#ffffff" stroke-opacity="0.04"/>
+<rect x="60" y="604" width="34" height="34" rx="9" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+<text x="77" y="626" text-anchor="middle" font-size="16">[AT]</text>
+<text x="380" y="617" text-anchor="end" font-family="Vazirmatn" font-size="13" font-weight="600" fill="#f4f6ff">Austria-VIE-01</text>
+<text x="380" y="631" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#5e6585">vless://...vienna:443</text>
+<rect x="395" y="612" width="76" height="22" rx="8" fill="#00ffa3" fill-opacity="0.12"/>
+<circle cx="408" cy="623" r="3" fill="#00ffa3"/>
+<text x="465" y="626" text-anchor="end" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#00ffa3">ONLINE</text>
+<rect x="490" y="619" width="60" height="5" rx="2" fill="#ffffff" fill-opacity="0.06"/>
+<rect x="490" y="619" width="18" height="5" rx="2" fill="#00ffa3"/>
+<text x="610" y="623" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#00ffa3">45ms</text><text x="685" y="623" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#f4f6ff">142 Mbps</text><text x="755" y="623" text-anchor="end" font-family="JetBrains Mono" font-size="11" fill="#a8b0c9">58</text>
+<rect x="785" y="614" width="40" height="20" rx="6" fill="#ffffff" fill-opacity="0.05"/>
+<text x="805" y="628" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="600" fill="#a8b0c9">4.0</text>
+<g transform="translate(845,612)">
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2.5"/>
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#00ffa3" stroke-width="2.5" stroke-linecap="round"
+          stroke-dasharray="84 100" transform="rotate(-90 14 14)"/>
+  <text x="14" y="18" text-anchor="middle" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#00ffa3">84</text>
+</g>
+<rect x="885" y="613" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="896" y="627" text-anchor="middle" font-size="10" fill="#a8b0c9">⚡</text>
+<rect x="912" y="613" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="923" y="627" text-anchor="middle" font-size="10" fill="#a8b0c9">✎</text><line x1="60" y1="648" x2="940" y2="648" stroke="#ffffff" stroke-opacity="0.04"/>
+<rect x="60" y="652" width="34" height="34" rx="9" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+<text x="77" y="674" text-anchor="middle" font-size="16">[JP]</text>
+<text x="380" y="665" text-anchor="end" font-family="Vazirmatn" font-size="13" font-weight="600" fill="#f4f6ff">Japan-TYO-01</text>
+<text x="380" y="679" text-anchor="end" font-family="JetBrains Mono" font-size="10" fill="#5e6585">vless://...tokyo:8443</text>
+<rect x="395" y="660" width="76" height="22" rx="8" fill="#00ffa3" fill-opacity="0.12"/>
+<circle cx="408" cy="671" r="3" fill="#00ffa3"/>
+<text x="465" y="674" text-anchor="end" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#00ffa3">ONLINE</text>
+<rect x="490" y="667" width="60" height="5" rx="2" fill="#ffffff" fill-opacity="0.06"/>
+<rect x="490" y="667" width="28" height="5" rx="2" fill="#ffb547"/>
+<text x="610" y="671" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#ffb547">95ms</text><text x="685" y="671" text-anchor="end" font-family="JetBrains Mono" font-size="11" font-weight="600" fill="#f4f6ff">102 Mbps</text><text x="755" y="671" text-anchor="end" font-family="JetBrains Mono" font-size="11" fill="#a8b0c9">30</text>
+<rect x="785" y="662" width="40" height="20" rx="6" fill="#ffffff" fill-opacity="0.05"/>
+<text x="805" y="676" text-anchor="middle" font-family="JetBrains Mono" font-size="10" font-weight="600" fill="#a8b0c9">3.0</text>
+<g transform="translate(845,660)">
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2.5"/>
+  <circle cx="14" cy="14" r="11" fill="none" stroke="#ffb547" stroke-width="2.5" stroke-linecap="round"
+          stroke-dasharray="72 100" transform="rotate(-90 14 14)"/>
+  <text x="14" y="18" text-anchor="middle" font-family="JetBrains Mono" font-size="9" font-weight="700" fill="#ffb547">72</text>
+</g>
+<rect x="885" y="661" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="896" y="675" text-anchor="middle" font-size="10" fill="#a8b0c9">⚡</text>
+<rect x="912" y="661" width="22" height="22" rx="6" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.08"/>
+<text x="923" y="675" text-anchor="middle" font-size="10" fill="#a8b0c9">✎</text>
+<g transform="translate(40,750)">
+  <rect width="920" height="36" rx="12" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="20" y="23" font-family="JetBrains Mono, monospace" font-size="10" fill="#a8b0c9">✓ Core: Xray v25.3.6 · Goroutines: 24 · RAM: 184MB · SOCKS: :10808 · HTTP: :10809</text>
+  <text x="900" y="23" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#00ffa3">● healthy</text>
+</g></svg>

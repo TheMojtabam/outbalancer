@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>OutBalancer · پنل مدیریت</title>
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='80' font-size='80'%3E⚡%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-logo"><i class="fa-solid fa-bolt-lightning"></i></div>
+      <div class="brand-text">
+        <h1>OutBalancer</h1>
+        <small>v0.1.0 · CORE</small>
+      </div>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-label">— داشبورد</div>
+      <a class="nav-item" href="#/" data-route="/"><i class="fa-solid fa-grid-2"></i> نمای کلی</a>
+      <a class="nav-item" href="#/stats" data-route="/stats"><i class="fa-solid fa-chart-line"></i> آمار زنده <span class="badge">LIVE</span></a>
+      <a class="nav-item" href="#/heatmap" data-route="/heatmap"><i class="fa-solid fa-fire-flame-curved"></i> هیت‌مپ مصرف</a>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-label">— پیکربندی</div>
+      <a class="nav-item" href="#/servers" data-route="/servers"><i class="fa-solid fa-server"></i> سرورها <span class="badge" id="badge-servers">۰</span></a>
+      <a class="nav-item" href="#/routing" data-route="/routing"><i class="fa-solid fa-route"></i> قوانین مسیریابی</a>
+      <a class="nav-item" href="#/algorithm" data-route="/algorithm"><i class="fa-solid fa-shuffle"></i> الگوریتم بالانس</a>
+      <a class="nav-item" href="#/speed" data-route="/speed"><i class="fa-solid fa-rocket"></i> Speed Boost <span class="badge">★</span></a>
+      <a class="nav-item" href="#/profiles" data-route="/profiles"><i class="fa-solid fa-layer-group"></i> پروفایل‌ها</a>
+      <a class="nav-item" href="#/schedule" data-route="/schedule"><i class="fa-solid fa-clock"></i> زمانبندی</a>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-label">— پیشرفته</div>
+      <a class="nav-item" href="#/alerts" data-route="/alerts"><i class="fa-solid fa-bell"></i> هشدارها <span class="badge warn" id="badge-alerts">۰</span></a>
+      <a class="nav-item" href="#/dns" data-route="/dns"><i class="fa-solid fa-shield-halved"></i> DNS هوشمند</a>
+      <a class="nav-item" href="#/api" data-route="/api"><i class="fa-solid fa-code-branch"></i> API & Webhooks</a>
+      <a class="nav-item" href="#/logs" data-route="/logs"><i class="fa-solid fa-file-lines"></i> لاگ‌ها</a>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-label">— سیستم</div>
+      <a class="nav-item" href="#/settings" data-route="/settings"><i class="fa-solid fa-gear"></i> تنظیمات</a>
+      <a class="nav-item" href="#/backup" data-route="/backup"><i class="fa-solid fa-cloud-arrow-up"></i> پشتیبان‌گیری</a>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="user-row">
+        <div class="avatar">A</div>
+        <div class="user-info">
+          <b>Admin</b>
+          <span id="footer-status">SUPERUSER</span>
+        </div>
+        <i id="conn-dot" class="fa-solid fa-circle" style="color: var(--good); font-size: 8px; box-shadow: 0 0 8px var(--good); border-radius: 50%;" title="connected"></i>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="topbar">
+      <button class="mobile-menu-btn" onclick="document.getElementById('sidebar').classList.toggle('open')">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div>
+        <h2 class="page-title" id="page-title">نمای <span>کلی</span></h2>
+        <div class="page-subtitle" id="page-subtitle">// real-time balancer telemetry</div>
+      </div>
+      <div class="top-actions">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input id="search-input" placeholder="جستجو..." />
+          <kbd>⌘K</kbd>
+        </div>
+        <div class="icon-btn" onclick="location.hash='#/alerts'" title="هشدارها">
+          <i class="fa-solid fa-bell"></i>
+          <span class="dot" id="alert-dot" style="display:none"></span>
+        </div>
+        <button class="btn-primary" onclick="openAddServerModal()">
+          <i class="fa-solid fa-plus"></i> کانفیگ جدید
+        </button>
+      </div>
+    </div>
+
+    <div id="view"></div>
+
+    <div class="statusbar">
+      <div class="sb-item"><i class="fa-solid fa-circle-check"></i> <b>Core:</b> <span id="sb-core">—</span></div>
+      <div class="sb-item"><i class="fa-solid fa-microchip"></i> <b>Goroutines:</b> <span id="sb-go">—</span></div>
+      <div class="sb-item"><i class="fa-solid fa-memory"></i> <b>RAM:</b> <span id="sb-ram">—</span></div>
+      <div class="sb-item"><i class="fa-solid fa-network-wired"></i> <b>SOCKS:</b> <span id="sb-socks">—</span></div>
+      <div class="sb-item"><i class="fa-solid fa-shield-halved"></i> <b>HTTP:</b> <span id="sb-http">—</span></div>
+      <div style="margin-right: auto;" class="sb-item">
+        <i class="fa-solid fa-heart-pulse" style="color:var(--good);"></i>
+        <b id="sb-status">healthy</b>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="modal-overlay" id="modal-overlay" onclick="if(event.target.id==='modal-overlay')closeModal()">
+  <div class="modal" id="modal">
+    <div class="modal-head">
+      <h3 class="modal-title" id="modal-title">عنوان</h3>
+      <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div id="modal-body"></div>
+    <div class="modal-foot" id="modal-foot"></div>
+  </div>
+</div>
+
+<div class="toast-stack" id="toasts"></div>
+
+<script src="/assets/app.js"></script>
+</body>
+</html>
