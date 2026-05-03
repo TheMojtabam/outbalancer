@@ -29,9 +29,15 @@ jobs:
           echo "Project root: $DIR"
           echo "dir=$DIR" >> "$GITHUB_OUTPUT"
 
-      - name: Verify dependencies
+      # IMPORTANT: tidy + download must run BEFORE vet/build, otherwise
+      # missing go.sum entries cause vet to fail loudly. The release.yml
+      # workflow already does this; CI must too.
+      - name: Tidy and download deps
         working-directory: ${{ steps.root.outputs.dir }}
-        run: go mod download && go mod verify
+        run: |
+          go mod tidy
+          go mod download
+          go mod verify
 
       - name: Vet
         working-directory: ${{ steps.root.outputs.dir }}
