@@ -8,13 +8,24 @@ import (
 
 // xrayConfig is the top-level JSON schema xray-core consumes via DecodeJSONConfig.
 type xrayConfig struct {
-	Log       map[string]string `json:"log,omitempty"`
-	Inbounds  []inbound         `json:"inbounds"`
-	Outbounds []outbound        `json:"outbounds"`
-	Routing   *routing          `json:"routing,omitempty"`
-	Stats     map[string]any    `json:"stats,omitempty"`
-	Policy    map[string]any    `json:"policy,omitempty"`
-	DNS       *dnsConf          `json:"dns,omitempty"`
+	Log         map[string]string `json:"log,omitempty"`
+	Inbounds    []inbound         `json:"inbounds"`
+	Outbounds   []outbound        `json:"outbounds"`
+	Routing     *routing          `json:"routing,omitempty"`
+	Stats       map[string]any    `json:"stats,omitempty"`
+	Policy      map[string]any    `json:"policy,omitempty"`
+	DNS         *dnsConf          `json:"dns,omitempty"`
+	Observatory *observatoryConf  `json:"observatory,omitempty"`
+}
+
+// observatoryConf is what xray-core's `leastPing` strategy needs to read
+// per-outbound latency from. Without this section enabled, the strategy
+// dereferences a nil observer and panics. (xray-core v1.8.24 bug.)
+type observatoryConf struct {
+	SubjectSelector []string `json:"subjectSelector"`
+	ProbeURL        string   `json:"probeUrl,omitempty"`
+	ProbeInterval   string   `json:"probeInterval,omitempty"`
+	EnableConcurrency bool   `json:"enableConcurrency,omitempty"`
 }
 
 type inbound struct {
@@ -65,8 +76,19 @@ type dnsConf struct {
 }
 
 // buildXrayConfig assembles the full JSON config xray will run with, based on
-// the user's saved AppConfig (servers + algorithm + routing rules).
+// the user's saved AppConfig (servers + algorithm + routing rules) and the
+// runtime metrics (real TCP pings).
 func buildXrayConfig(cfg config.AppConfig) xrayConfig {
+	return buildXrayConfigWithMetrics(cfg, nil)
+}
+
+// buildXrayConfigWithMetrics is the internal version that takes a metrics
+// snapshot so it can weight outbounds by real ping. Air-gapped networks (Iran
+// without intl. internet) cannot reach Observatory's HTTP probe targets like
+// google.com/generate_204, so we replace `leastPing` with `random` strategy
+// where each outbound's weight is `1000/ping_ms` (lower ping → much higher
+// weight). The result behaves like leastPing without needing the Observatory.
+func buildXrayConfigWithMetrics(cfg config.AppConfig, pings map[string]float64) xrayConfig {
 	xc := xrayConfig{
 		Log: map[string]string{
 			"loglevel": "warning",
@@ -135,11 +157,40 @@ func buildXrayConfig(cfg config.AppConfig) xrayConfig {
 		DomainStrategy: "AsIs",
 	}
 	if len(selector) > 0 {
+		strat := balancerStrategy(cfg.Algorithm)
+
+		// Air-gap-friendly translation:
+		// xray-core's leastPing/leastLoad require an Observatory which probes
+		// upstream servers via HTTP (default: google.com/generate_204). On
+		// servers in Iran without international internet, that probe is
+		// unreachable and the strategy panics with nil pointer dereference.
+		//
+		// We sidestep this by translating "leastPing" / "leastLoad" into a
+		// `random` strategy with weighted costs computed from the *real*
+		// TCP-pings our health-checker already measures (no HTTP probe).
+		// Lower ping ⇒ much higher weight ⇒ that server picked more often.
+		needsObservatory := false
+		switch strat["type"] {
+		case "leastPing", "leastLoad":
+			weighted := buildWeightedRandom(selector, pings, cfg)
+			if weighted != nil {
+				strat = weighted
+			} else {
+				// We have no pings yet — fall back to plain random until the
+				// first round of TCP pings completes (~15s after startup).
+				strat = map[string]any{"type": "random"}
+			}
+		case "weighted":
+			// User explicitly picked weighted — honor configured per-server
+			// Weight values from cfg.Servers[].Weight.
+			strat = buildExplicitWeighted(selector, cfg)
+		}
+
 		r.Balancers = []balancerConf{
 			{
 				Tag:      "balanced",
 				Selector: selector,
-				Strategy: balancerStrategy(cfg.Algorithm),
+				Strategy: strat,
 			},
 		}
 		// Default catch-all: send everything through the balancer
@@ -148,6 +199,18 @@ func buildXrayConfig(cfg config.AppConfig) xrayConfig {
 			Network:     "tcp,udp",
 			BalancerTag: "balanced",
 		})
+
+		// Only attach Observatory when explicitly required (we no longer use
+		// leastPing/leastLoad directly). Kept for forward-compatibility if the
+		// user adds a custom strategy.
+		if needsObservatory {
+			xc.Observatory = &observatoryConf{
+				SubjectSelector:   selector,
+				ProbeURL:          "https://www.google.com/generate_204",
+				ProbeInterval:     "10s",
+				EnableConcurrency: true,
+			}
+		}
 	}
 	// User-defined routing rules
 	for _, rule := range cfg.RoutingRules {
@@ -353,7 +416,96 @@ func buildStreamSettings(s config.Server) map[string]any {
 	return ss
 }
 
+// buildWeightedRandom returns a `random` strategy with per-outbound weights
+// derived from the real TCP-ping numbers our health-checker measured. This
+// reproduces leastPing-like behavior without needing xray's Observatory (which
+// uses an HTTP probe that's unreachable from inside Iran).
+//
+// Returns nil if there are no usable ping samples yet — the caller should fall
+// back to plain `random` for the first 15s of startup.
+func buildWeightedRandom(selector []string, pings map[string]float64, cfg config.AppConfig) map[string]any {
+	if len(pings) == 0 {
+		return nil
+	}
+	// Build a map: tag → ping (in ms).
+	tagPing := make(map[string]float64)
+	for _, srv := range cfg.Servers {
+		if !srv.Enabled {
+			continue
+		}
+		if p, ok := pings[srv.ID]; ok && p > 0 && p < 9000 {
+			tagPing[srv.Tag] = p
+		}
+	}
+	if len(tagPing) == 0 {
+		return nil
+	}
+
+	// Compute weights: 1000 / ping. A 50ms server gets weight 20, 200ms gets 5.
+	// Clamp at min 1 so very-slow servers still occasionally get traffic.
+	type weight struct {
+		Tag    string `json:"tag"`
+		Weight int    `json:"weight"`
+	}
+	weights := make([]map[string]any, 0, len(selector))
+	for _, tag := range selector {
+		p, ok := tagPing[tag]
+		if !ok {
+			// Server hasn't been pinged yet — give a small default weight
+			weights = append(weights, map[string]any{"match": tag, "weight": 1.0})
+			continue
+		}
+		w := 1000.0 / p
+		if w < 1 {
+			w = 1
+		}
+		weights = append(weights, map[string]any{"match": tag, "weight": w})
+	}
+
+	return map[string]any{
+		"type": "random",
+		"settings": map[string]any{
+			"costs": weights,
+		},
+	}
+}
+
+// buildExplicitWeighted honors the per-server Weight values the user set
+// manually (1.0 to 10.0). Lower weight = picked less often.
+func buildExplicitWeighted(selector []string, cfg config.AppConfig) map[string]any {
+	tagWeight := make(map[string]float64)
+	for _, srv := range cfg.Servers {
+		if !srv.Enabled {
+			continue
+		}
+		w := srv.Weight
+		if w <= 0 {
+			w = 1
+		}
+		tagWeight[srv.Tag] = w
+	}
+	weights := make([]map[string]any, 0, len(selector))
+	for _, tag := range selector {
+		w, ok := tagWeight[tag]
+		if !ok {
+			w = 1
+		}
+		weights = append(weights, map[string]any{"match": tag, "weight": w})
+	}
+	return map[string]any{
+		"type": "random",
+		"settings": map[string]any{
+			"costs": weights,
+		},
+	}
+}
+
 // balancerStrategy maps OutBalancer's algorithm IDs to xray's strategy block.
+//
+// Note on leastPing/leastLoad: these REQUIRE an Observatory service to be
+// configured at the top level — otherwise xray-core panics with a nil pointer
+// dereference. We add the observatory in buildXrayConfig() whenever one of
+// these strategies is selected.
 func balancerStrategy(alg string) map[string]any {
 	switch alg {
 	case "latency", "leastping":
@@ -367,8 +519,9 @@ func balancerStrategy(alg string) map[string]any {
 	case "random":
 		return map[string]any{"type": "random"}
 	}
-	// default
-	return map[string]any{"type": "leastPing"}
+	// SAFE DEFAULT: roundRobin doesn't need an observer, so the panel never
+	// crashes even if the user hasn't picked an algorithm yet.
+	return map[string]any{"type": "roundRobin"}
 }
 
 // defaultPolicy enables stats collection so we can read per-outbound bytes.
