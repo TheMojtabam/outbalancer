@@ -19,13 +19,22 @@ import (
 //  2. **Demo mode (explicit `--demo` flag only):** A synthetic 1 Hz feed is
 //     produced based on each server's score & weight, so reviewers can see
 //     the panel populated with realistic-looking data without any real proxy.
+// Reapplier is anything that can re-render & restart xray with the latest
+// metrics — typically the xray.Manager. We accept it as an interface to avoid
+// a package-level import cycle.
+type Reapplier interface {
+	Apply() error
+}
+
 type Balancer struct {
-	store   *store.Store
-	checker *HealthChecker
-	stop    chan struct{}
-	wg      sync.WaitGroup
-	rng     *rand.Rand
-	demo    bool // when true, generate synthetic traffic. Default: false.
+	store     *store.Store
+	checker   *HealthChecker
+	stop      chan struct{}
+	wg        sync.WaitGroup
+	rng       *rand.Rand
+	demo      bool
+	xray      Reapplier // optional; when set, reapplied after ping rounds
+	lastApply time.Time
 }
 
 // New constructs a real-mode Balancer (no synthetic traffic).
@@ -39,6 +48,10 @@ func New(s *store.Store) *Balancer {
 	}
 }
 
+// SetXray attaches the xray manager so the balancer can reapply config after
+// ping samples update (so weighted-random reflects real latency).
+func (b *Balancer) SetXray(x Reapplier) { b.xray = x }
+
 // SetDemoMode enables synthetic traffic generation. Call this only from the
 // demo command path; never from normal startup.
 func (b *Balancer) SetDemoMode(on bool) { b.demo = on }
@@ -48,11 +61,60 @@ func (b *Balancer) Start() {
 	b.checker.Start()
 	b.wg.Add(1)
 	go b.trafficLoop()
+	if !b.demo {
+		// Periodic reapply: every 60s, re-render the xray config so the
+		// weighted-random strategy gets fresh per-outbound weights computed
+		// from the latest TCP-ping measurements. (No-op if xray isn't
+		// attached or no servers are configured yet.)
+		b.wg.Add(1)
+		go b.reapplyLoop()
+	}
 	if b.demo {
 		b.store.AddLog("info", "balancer", "بالانسر در حالت دمو شروع به کار کرد")
 	} else {
 		b.store.AddLog("info", "balancer", "بالانسر شروع به کار کرد (واقعی - منتظر آمار از xray)")
 	}
+}
+
+// reapplyLoop periodically reapplies xray config so the weighted-random
+// strategy reflects the most recent TCP-ping samples. Skipped in demo mode.
+func (b *Balancer) reapplyLoop() {
+	defer b.wg.Done()
+	// First reapply ~20s after startup, just after the initial healthcheck
+	// round completes, then every 60s.
+	first := time.NewTimer(20 * time.Second)
+	defer first.Stop()
+	select {
+	case <-b.stop:
+		return
+	case <-first.C:
+	}
+	b.maybeReapply()
+
+	t := time.NewTicker(60 * time.Second)
+	defer t.Stop()
+	for {
+		select {
+		case <-b.stop:
+			return
+		case <-t.C:
+			b.maybeReapply()
+		}
+	}
+}
+
+func (b *Balancer) maybeReapply() {
+	if b.xray == nil {
+		return
+	}
+	if len(b.store.Servers()) == 0 {
+		return
+	}
+	if err := b.xray.Apply(); err != nil {
+		b.store.AddLog("warn", "balancer", "reapply xray با ping های جدید: "+err.Error())
+		return
+	}
+	b.lastApply = time.Now()
 }
 
 // Stop signals all workers to stop and waits.
