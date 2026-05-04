@@ -99,6 +99,7 @@ func main() {
 	// 4. Balancer — synthetic traffic only when --demo is set
 	bal := balancer.New(st)
 	bal.SetDemoMode(demoMode)
+	bal.SetXray(xm) // so balancer can reapply xray config with fresh pings
 	bal.Start()
 	defer bal.Stop()
 
