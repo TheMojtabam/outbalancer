@@ -42,7 +42,16 @@ func (m *Manager) Apply() error {
 	m.mu.Lock()
 	defer m.mu.Unlock()
 	cfg := m.store.Config()
-	xc := buildXrayConfig(cfg)
+
+	// Snapshot real TCP-pings so balancer weights reflect live measurements.
+	metrics := m.store.Metrics()
+	pings := make(map[string]float64, len(metrics))
+	for id, met := range metrics {
+		if met != nil && met.PingMs > 0 && met.PingMs < 9000 {
+			pings[id] = met.PingMs
+		}
+	}
+	xc := buildXrayConfigWithMetrics(cfg, pings)
 	data, _ := json.MarshalIndent(xc, "", "  ")
 	_ = os.WriteFile(m.cfgPath, data, 0o644)
 	m.store.AddLog("info", "xray", fmt.Sprintf("config رندر شد (stub): %d outbound", len(cfg.Servers)))
