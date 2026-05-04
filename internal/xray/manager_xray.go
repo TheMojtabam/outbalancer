@@ -27,6 +27,7 @@ import (
 	_ "github.com/xtls/xray-core/app/dns"
 	_ "github.com/xtls/xray-core/app/dns/fakedns"
 	_ "github.com/xtls/xray-core/app/metrics"
+	_ "github.com/xtls/xray-core/app/observatory" // REQUIRED for leastPing/leastLoad
 	_ "github.com/xtls/xray-core/app/policy"
 	_ "github.com/xtls/xray-core/app/router"
 	_ "github.com/xtls/xray-core/app/stats"
@@ -116,7 +117,16 @@ func (m *Manager) Apply() error {
 		return m.stopLocked()
 	}
 
-	xc := buildXrayConfig(cfg)
+	// Snapshot the current ping metrics so the balancer strategy weights
+	// can be computed from real TCP pings (no Observatory / HTTP probe).
+	metrics := m.store.Metrics()
+	pings := make(map[string]float64, len(metrics))
+	for id, met := range metrics {
+		if met != nil && met.PingMs > 0 && met.PingMs < 9000 {
+			pings[id] = met.PingMs
+		}
+	}
+	xc := buildXrayConfigWithMetrics(cfg, pings)
 	data, err := json.MarshalIndent(xc, "", "  ")
 	if err != nil {
 		return fmt.Errorf("marshal xray cfg: %w", err)
